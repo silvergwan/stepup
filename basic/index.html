@@ -14,14 +14,30 @@
         margin: 24px;
         padding: 16px;
         border: 1px solid black;
-        width: 20%;
       }
 
       .project-section {
         margin: 24px;
         padding: 16px;
         border: 1px solid black;
-        width: 25%;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+
+      header {
+        padding: 16px 0;
+      }
+
+      main {
+        padding-top: 24px;
+      }
+
+      section {
+        margin: 24px 0;
       }
 
       h1,
@@ -30,21 +46,27 @@
         margin-bottom: 16px;
       }
 
-      p {
-        margin: 24px;
+      section p {
+        margin: 16px;
       }
 
       .contact {
         margin: 16px;
       }
+
+      .project-section article {
+        margin-bottom: 16px;
+      }
     </style>
   </head>
   <body>
-    <header>
-      <h1>Hi, I'm 은관</h1>
+    <header class="header">
+      <div class="container">
+        <h1>Hi, I'm 은관</h1>
+      </div>
     </header>
-    <main>
-      <section>
+    <main class="container">
+      <section class="about-section">
         <h2>About</h2>
         <p>재미를 추구하는 사람.</p>
       </section>
