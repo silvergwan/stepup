@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .project-list {
+        display: flex;
+        gap: 16px;
+      }
+
+      .project-card {
+        flex: 1;
+        border: 1px solid black;
+        padding: 16px;
+      }
+
+      @media (max-width: 768px) {
+        .project-list {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <h1>Hi, I'm 은관</h1>
+        <nav>Menu</nav>
+      </div>
+    </header>
+    <main>
+      <section class="project-section">
+        <h2>Projects</h2>
+
+        <div class="project-list">
+          <article class="project-card">Project 1</article>
+          <article class="project-card">Project 2</article>
+          <article class="project-card">Project 3</article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
