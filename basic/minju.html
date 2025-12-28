@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>밍주</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.6;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        padding: 0;
+        gap: 24px;
+      }
+
+      .box {
+        border: 1px solid #333;
+        padding: 12px;
+      }
+
+      .header {
+        grid-column: 1 / -1;
+        text-align: left;
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding-left: 24px;
+      }
+
+      .nav {
+        grid-column: 1 / 2;
+        grid-row: 2 / span 3;
+      }
+
+      .profile {
+        grid-column: 4 / 6;
+        grid-row: 2;
+      }
+
+      .info {
+        grid-column: 4 / 6;
+        grid-row: 3 / span 2;
+      }
+
+      .photo {
+        grid-column: 2 / 4;
+        grid-row: 2 / span 3;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .name-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+
+      .photo img {
+        max-width: 75%;
+        height: auto;
+        display: block;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .info ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .info h4 {
+        font-size: 0.95rem;
+        margin-bottom: 4px;
+      }
+
+      /* ===== Responsive ===== */
+      @media (max-width: 768px) {
+        .layout {
+          grid-template-columns: 1fr;
+        }
+
+        .header,
+        .nav,
+        .profile,
+        .info,
+        .photo {
+          grid-column: auto;
+          grid-row: auto;
+        }
+
+        .name-wrap {
+          flex-direction: column;
+          gap: 4px;
+        }
+
+        .photo img {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="layout">
+      <!-- Header -->
+      <div class="box header">김민주</div>
+
+      <!-- Navigation -->
+      <div class="box nav">
+        <nav>
+          <ul>
+            <li>Calendar</li>
+            <li>Photos</li>
+            <li>Works</li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Profile -->
+      <div class="box profile">
+        <div class="name-wrap">
+          <h2>김민주</h2>
+          <h3>Minju Kim</h3>
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="box info">
+        <ul>
+          <li>
+            <h4>영화</h4>
+            <p>어제 일은 모두 괜찮아 (2019), 청설 (2024)</p>
+          </li>
+          <li>
+            <h4>드라마</h4>
+            <p>
+              위대한 유혹자 (2018), 금혼령 (2022), 커넥션 (2024), 언더커버
+              하이스쿨 (2025), 샤이닝 (2026)
+            </p>
+          </li>
+          <li>
+            <h4>음악</h4>
+            <p>IZ*ONE 활동 앨범 및 프로젝트 다수, ZERO:ATTITUDE (2021)</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Photo -->
+      <div class="box photo">
+        <img src="../assets/image.png" alt="Kim Minju" />
+      </div>
+    </div>
+  </body>
+</html>
